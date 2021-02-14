@@ -103,7 +103,7 @@ const createSlider = () => {
   // hide image aria
 
   imagesArea.style.display = 'none';
-  const duration = document.getElementById('duration').value = 1000;
+  const duration = document.getElementById('duration').value || 100000;
  
  sliders.forEach(slide => {
       let item = document.createElement('div')
@@ -113,12 +113,18 @@ const createSlider = () => {
       alt="">`;
       sliderContainer.appendChild(item)
     })
-    changeSlide(0)
+    if(duration > 0){
+      changeSlide(0)
     timer = setInterval(function () {
       slideIndex++;
       changeSlide(slideIndex);
     }, duration);
  
+    }
+    else {
+      alert ('timer can not be negative');
+    }
+    
 }
 
 // change slider index 
