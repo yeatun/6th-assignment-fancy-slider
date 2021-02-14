@@ -58,7 +58,7 @@ const getImages = (query) => {
       }
       else{
         
-        errorMessage.innerText='no result !please try again';
+        errorMessage.innerText='no result !please try again!';
         gallery.innerHTML = '';
         
       }

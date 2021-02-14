@@ -39,7 +39,7 @@ img {
 .prev, .next {
   background-color: transparent;
   padding: 8px 10px;
-  color: #fff;
+  color: rgb(248, 239, 239);
 }
 
 .dot {
